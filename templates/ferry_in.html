@@ -1,0 +1,601 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<link href="{% static 'style2.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<title>FERRY</title>
+
+<style media="screen">
+.hide  {
+    display: none;
+ }
+ body{
+   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url({% static 'jetty.jpg'%});
+    background-position: center;
+    background-size: cover;
+
+    font-style: italic;
+    font-weight: bold;
+}
+
+.booking-form-box{
+    max-width: 450px;
+    box-sizing: border-box;
+    
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    margin: 10% auto 0;
+}
+
+.booking-form-box button{
+    background-color: #ff0066;
+    color: #fff;
+    width: 5rem;
+    margin-bottom: 2rem;
+    border: none;
+    justify-content: left;
+}
+
+.booking-form-box button:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+.booking-form-box label{
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:20px;
+}
+
+.booking-form-box h1{
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:50px;
+}
+
+p{
+    color: rgb(236, 232, 14);
+    text-align: center;
+}
+
+</style>
+</head>
+<body> 
+   
+<div class=" booking-form-box">
+<h1>SELECT FERRY</h1>
+
+
+   <label>FROM</label>
+
+<form id="myform" action="{% url 'ferryout' %}">
+<select id="location" name="drop" style="width:200px" required>
+ <option style="display:none;"></option>
+ <option value="Agardanda">Agardanda</option>
+ <option value="Alibaug beach">Alibaug beach</option>
+ <option value="Arnala">Arnala</option>
+ <option value="Arnala Fort">Arnala Fort</option>
+ <option value="Belapur">Belapur</option>
+ <option value="Bhaucha Dhakka">Bhaucha Dhakka</option>
+ <option value="Borivali Jetty">Borivali Jetty</option>
+ <option value="Dandi">Dandi</option>
+ <option value="Dighi">Dighi</option>
+ <option value="Essel World">Essel World</option>
+ <option value="Gateway">Gateway</option>
+ <option value="Gorai Jetty">Gorai Jetty</option>
+ <option value="Harnai">Harnai</option>
+ <option value="Janjira Fort">Janjira Fort</option>
+ <option value="Karanja">Karanja</option>
+ <option value="Kharekuran">Kharekuran</option>
+ <option value="Kulaba Fort">Kulaba_Fort</option>
+ <option value="Madh">Madh</option>
+ <option value="Malvan">Malvan</option>
+ <option value="Manori">Manori</option>
+ <option value="Mandwa(Alibaug)">Mandwa(Alibaug)</option>
+ <option value="Marve">Marve</option>
+ <option value="Mora">Mora</option>
+ <option value="Murbe">Murbe</option>
+ <option value="Naigaon Jetty">Naigaon Jetty</option>
+ <option value="Navapur">Navapur</option>
+ <option value="Panju Island">Panju Island</option>
+ <option value="Rajpuri">Rajpuri</option>
+ <option value="Rewas">Rewas</option>
+ <option value="Rohini">Rohini</option>
+ <option value="Sassoon Dock">Sassoon Dock</option>
+ <option value="Satpati">Satpati</option>
+ <option value="Sindhudurg Fort">Sindhudurg Fort</option>
+ <option value="Suvarnadurga Fort">Suvarnadurga Fort</option>
+ <option value="Thal">Thal</option>
+ <option value="Underi Fort">Underi Fort</option>
+ <option value="Versova">Versova</option>
+</select>
+<br>
+
+<u>
+   <label>TO</label>
+</u>
+<div class="label">
+<select id="location1" name="term" style="width:200px">
+   <option style="display:none;"></option>
+  <option value="Dighi">Dighi</option>
+  <option value="Rohini">Rohini</option>
+</select>
+
+ <select id="location2" name="term" style="width:200px" >
+   <option style="display:none;"></option>
+  <option value="Arnala Fort">Arnala Fort</option>
+ </select>
+
+ <select id="location3" name="term" style="width:200px">
+   <option style="display:none;"></option>
+    <option value="Arnala">Arnala</option>
+ </select>
+
+ <select id="location4" name="term" style="width:200px">
+   <option style="display:none;"></option>
+    <option value="Elephanta">Elephanta</option>
+ </select>
+
+ <select id="location5" name="term" style="width:200px">
+   <option style="display:none;"></option>
+    <option value="Rewas">Rewas</option>
+    <option value="Mora">Mora</option>
+    <option value="Elephanta">Elephanta</option>
+ </select>
+
+ <select id="location6" name="term" style="width:200px">
+   <option style="display:none;"></option>
+    <option value="Gorai Jetty">Gorai Jetty</option>
+    <option value="Essel World">Essel World</option>
+ </select>
+
+ <select id="location7" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Navapur">Navapur</option> 
+ </select>
+
+ <select id="location8" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Rajpuri">Rajpuri</option> 
+   <option value="Janjira Fort">Janjira Fort</option> 
+   <option value="Agardanda">Agardanda</option> 
+ </select>
+
+ <select id="location9" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Borivali Jetty">Borivali Jetty</option> 
+   <option value="Marve">Marve</option> 
+ </select>
+
+ <select id="location10" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Elephanta">Elephanta</option>
+   <option value="Mandwa(Alibaug)">Mandwa(Alibaug)</option>
+ </select>
+
+ <select id="location11" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Borivali Jetty">Borivali Jetty</option>
+ </select>
+
+ <select id="location12" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Rajpuri">Rajpuri</option>
+   <option value="Dighi">Dighi</option>
+ </select>
+
+ <select id="location13" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Rewas">Rewas</option> 
+ </select>
+
+ <select id="location14" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Murbe">Murbe</option> 
+ </select>
+
+ <select id="location15" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Marve">Marve</option> 
+ </select>
+
+ <select id="location16" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Essel World">Essel World</option> 
+   <option value="Manori">Manori</option>
+ </select>
+
+ <select id="location17" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Elephanta">Elephanta</option>
+   <option value="Bhaucha Dhakka">Bhaucha Dhakka</option>
+   <option value="Sassoon Dock">Sassoon Dock</option> 
+ </select>
+
+ <select id="location18" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Satpati">Satpati</option> 
+   <option value="Kharekuran">Kharekuran</option>
+ </select>
+
+ <select id="location19" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Dandi">Dandi</option> 
+ </select>
+
+ <select id="location20" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Naigaon Jetty">Naigaon Jetty</option> 
+ </select>
+
+ <select id="location21" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Dighi">Dighi</option>
+   <option value="Janjira Fort">Janjira Fort</option> 
+ </select>
+
+ <select id="location22" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Karanja">Karanja</option> 
+   <option value="Bhaucha Dhakka">Bhaucha Dhakka</option>
+ </select>
+
+ <select id="location23" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Agardanda">Agardanda</option> 
+ </select>
+ <select id="location24" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Mora">Mora</option> 
+ </select>
+ <select id="location25" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Murbe">Murbe</option> 
+ </select>
+ <select id="location26" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Madh">Madh</option> 
+ </select>
+ <select id="location27" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Gateway">Gateway</option> 
+ </select>
+ <select id="location28" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Malvan">Malvan</option> 
+ </select>
+ <select id="location29" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Sindhudurg Fort">Sindhudurg Fort</option> 
+ </select>
+ <select id="location30" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Panju Island">Panju Island</option> 
+ </select>
+ <select id="location31" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Versova">Versova</option> 
+ </select>
+ <select id="location32" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Kulaba Fort">Kulaba_Fort</option> 
+ </select>
+ <select id="location33" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Alibaug beach">Alibaug beach</option> 
+ </select>
+ <select id="location34" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Suvarnadurga Fort">Suvarnadurga Fort</option> 
+ </select>
+ <select id="location35" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Harnai">Harnai</option> 
+ </select>
+ <select id="location36" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Underi Fort">Underi Fort</option> 
+ </select>
+ <select id="location37" name="term" style="width:200px">
+   <option style="display:none;"></option>
+   <option value="Thal">Thal</option> 
+ </select>
+<br>
+<br>
+   <button type="submit">Submit</button>
+
+
+</div>
+
+</form>
+
+<script>
+(function() {
+   'use strict';
+   /* jshint browser: true */
+
+   var d=document;
+   var mf=d.getElementById('myform');
+   var se=d.getElementById('location2');
+   var te=d.getElementById('location1');
+   var fe=d.getElementById('location3');
+   var ae=d.getElementById('location4');
+   var be=d.getElementById('location5');
+   var ce=d.getElementById('location6');
+   var de=d.getElementById('location7');
+   var ee=d.getElementById('location8');
+   var ge=d.getElementById('location9');
+   var he=d.getElementById('location10');
+   var ie=d.getElementById('location11');
+   var je=d.getElementById('location12');
+   var ke=d.getElementById('location13');
+   var le=d.getElementById('location14');
+   var me=d.getElementById('location15');
+   var ne=d.getElementById('location16');
+   var oe=d.getElementById('location17');
+   var pe=d.getElementById('location18');
+   var qe=d.getElementById('location19');
+   var re=d.getElementById('location20');
+   var ue=d.getElementById('location21');
+   var ve=d.getElementById('location22');
+   var we=d.getElementById('location23');
+   var xe=d.getElementById('location24');
+   var ye=d.getElementById('location25');
+   var ze=d.getElementById('location26');
+   var ma=d.getElementById('location27');
+   var ml=d.getElementById('location28');
+   var si=d.getElementById('location29');
+   var pn=d.getElementById('location30');
+   var md=d.getElementById('location31');
+   var kb=d.getElementById('location32');
+   var ab=d.getElementById('location33');
+   var ha=d.getElementById('location34');
+   var su=d.getElementById('location35');
+   var th=d.getElementById('location36');
+   var un=d.getElementById('location37');
+   var lo=d.getElementById('location');
+   var temp;
+
+   mf.reset();
+   se.className='hide';
+   te.className='hide';
+   fe.className='hide';
+   ae.className='hide';
+   be.className='hide';
+   ce.className='hide';
+   de.className='hide';
+   ee.className='hide';
+   ge.className='hide';
+   he.className='hide';
+   ie.className='hide';
+   je.className='hide';
+   ke.className='hide';
+   le.className='hide';
+   me.className='hide';
+   ne.className='hide';
+   oe.className='hide';
+   pe.className='hide';
+   qe.className='hide';
+   re.className='hide';
+   ue.className='hide';
+   ve.className='hide';
+   we.className='hide';
+   xe.className='hide';
+   ye.className='hide';
+   ze.className='hide';
+   ma.className='hide';
+   ml.className='hide';
+   si.className='hide';
+   pn.className='hide';
+   md.className='hide';
+   kb.className='hide';
+   ab.className='hide';
+   ha.className='hide';
+   su.className='hide';
+   un.className='hide';
+   th.className='hide';
+   lo.onchange=function() {
+if(this.value==='Agardanda') {
+   te.className=te.className.replace('hide','');
+   te.name="BOX";
+ }
+ else if(this.value==='Arnala'){
+     se.className=se.className.replace('hide','');
+     se.name="BOX";
+ }
+else if(this.value==='Arnala Fort'){
+     fe.className=fe.className.replace('hide','');
+     fe.name="BOX";
+ }
+else if(this.value==='Belapur'){
+   ae.className=ae.className.replace('hide','');
+   ae.name="BOX";
+}
+else if(this.value==='Bhaucha Dhakka'){
+   be.className=be.className.replace('hide','');
+   be.name="BOX";
+}
+else if(this.value==='Borivali Jetty'){
+   ce.className=ce.className.replace('hide','');
+   ce.name="BOX";
+}
+else if(this.value==='Dandi'){
+   de.className=de.className.replace('hide','');
+   de.name="BOX";
+}
+else if(this.value==='Dighi'){
+   ee.className=ee.className.replace('hide','');
+   ee.name="BOX";
+}
+else if(this.value==='Essel World'){
+   ge.className=ge.className.replace('hide','');
+   ge.name="BOX";
+}
+else if(this.value==='Gateway'){
+   he.className=he.className.replace('hide','');
+   he.name="BOX";
+}
+else if(this.value==='Gorai Jetty'){
+   ie.className=ie.className.replace('hide','');
+   ie.name="BOX";
+}
+else if(this.value==='Janjira Fort'){
+   je.className=je.className.replace('hide','');
+   je.name="BOX";
+}
+else if(this.value==='Karanja'){
+   ke.className=ke.className.replace('hide','');
+   ke.name="BOX";
+}
+else if(this.value==='Kharekuran'){
+   le.className=le.className.replace('hide','');
+   le.name="BOX";
+}
+else if(this.value==='Manori'){
+   me.className=me.className.replace('hide','');
+   me.name="BOX";
+}
+else if(this.value==='Marve'){
+   ne.className=ne.className.replace('hide','');
+   ne.name="BOX";
+}
+else if(this.value==='Mora'){
+   oe.className=oe.className.replace('hide','');
+   oe.name="BOX";
+}
+else if(this.value==='Murbe'){
+   pe.className=pe.className.replace('hide','');
+   pe.name="BOX";
+}
+else if(this.value==='Navapur'){
+   qe.className=qe.className.replace('hide','');
+   qe.name="BOX";
+}
+else if(this.value==='Panju Island'){
+   re.className=re.className.replace('hide','');
+   re.name="BOX";
+}
+else if(this.value==='Rajpuri'){
+   ue.className=ue.className.replace('hide','');
+   ue.name="BOX";
+}
+else if(this.value==='Rewas'){
+   ve.className=ve.className.replace('hide','');
+   ve.name="BOX";
+}
+else if(this.value==='Rohini'){
+   we.className=we.className.replace('hide','');
+   we.name="BOX";
+}
+else if(this.value==='Sassoon Dock'){
+   xe.className=xe.className.replace('hide','');
+   xe.name="BOX";
+}
+else if(this.value==='Satpati'){
+   ye.className=ye.className.replace('hide','');
+   ye.name="BOX";
+}
+else if(this.value==='Versova'){
+   ze.className=ze.className.replace('hide','');
+   ze.name="BOX";
+}
+else if(this.value=='Mandwa(Alibaug)'){
+   ma.className=ma.className.replace('hide','');
+   ma.name="BOX";
+}
+else if(this.value=='Sindhudurg Fort'){
+   ml.className=ml.className.replace('hide','');
+   ml.name="BOX";
+}
+else if(this.value=='Malvan'){
+   si.className=si.className.replace('hide','');
+   si.name="BOX";
+}
+else if(this.value=='Naigaon Jetty'){
+   pn.className=pn.className.replace('hide','');
+   pn.name="BOX";
+}
+else if(this.value=='Madh'){
+   md.className=md.className.replace('hide','');
+   md.name="BOX";
+}
+else if(this.value=='Kulaba Fort'){
+   ab.className=ab.className.replace('hide','');
+   ab.name="BOX";
+}
+else if(this.value=='Alibaug beach'){
+   kb.className=kb.className.replace('hide','');
+   kb.name="BOX";
+}
+else if(this.value=='Suvarnadurga Fort'){
+   su.className=su.className.replace('hide','');
+   su.name="BOX";
+}
+else if(this.value=='Harnai'){
+   ha.className=ha.className.replace('hide','');
+   ha.name="BOX";
+}
+else if(this.value=='Underi Fort'){
+   un.className=un.className.replace('hide','');
+   un.name="BOX";
+}
+else if(this.value=='Thal'){
+   th.className=th.className.replace('hide','');
+   th.name="BOX";
+}
+else {
+   temp=this.value;
+   se.className='hide';
+   te.className='hide';
+   fe.className='hide';
+   ae.className='hide';
+   be.className='hide';
+   ce.className='hide';
+   de.className='hide';
+   ee.className='hide';
+   ge.className='hide';
+   he.className='hide';
+   ie.className='hide';
+   je.className='hide';
+   ke.className='hide';
+   le.className='hide';
+   me.className='hide';
+   ne.className='hide';
+   oe.className='hide';
+   pe.className='hide';
+   qe.className='hide';
+   re.className='hide';
+   ue.className='hide';
+   ve.className='hide';
+   we.className='hide';
+   xe.className='hide';
+   ye.className='hide';
+   ze.className='hide';
+   ml.className='hide';
+   ma.className='hide';
+   si.className='hide';
+   pn.className='hide';
+   md.className='hide';
+   kb.className='hide';
+   ab.className='hide';
+   ha.className='hide';
+   su.className='hide';
+   un.className='hide';
+   th.className='hide';
+   mf.reset();
+   lo.value=temp;
+  }
+ };
+}());
+</script>
+
+
+</div>
+<p>Please refresh the page to reselect locations</p>
+</body>
+</html>

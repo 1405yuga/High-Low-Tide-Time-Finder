@@ -1,0 +1,52 @@
+.hide  {
+    display: none;
+ }
+ body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(jetty.jpg);
+    background-position: center;
+    background-size: cover;
+
+    font-style: italic;
+    font-weight: bold;
+}
+
+.booking-form-box{
+    max-width: 450px;
+    box-sizing: border-box;
+    
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    margin: 10% auto 0;
+}
+
+.booking-form-box button{
+    background-color: #ff0066;
+    color: #fff;
+    width: 5rem;
+    margin-bottom: 2rem;
+    border: none;
+    justify-content: left;
+}
+
+.booking-form-box button:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+.booking-form-box label{
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:20px;
+}
+
+.booking-form-box h1{
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:50px;
+}
+
+p{
+    color: red;
+    text-align: center;
+}

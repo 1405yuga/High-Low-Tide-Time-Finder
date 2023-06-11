@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+</head>
+<body>
+    <form action="{% url 'webpage2'%}">
+        <label>List</label>
+        <select name="box">
+            <option style="display:none;"></option>
+            <option value="obj1">obj 1</option>
+            <option value="obj2">obj 2</option>
+            <option value="obj3">obj 3</option>
+            <option value="obj4">obj 4</option>
+        </select>
+        <input type="submit" value="click">
+    </form>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{% load static%}
+<!DOCTYPE html>
+<html >
+<head>
+    <title>picnic spot</title>
+	<link  rel="stylesheet"type="text/css" href="style2.css">
+<style>
+	header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url({% static 'crop.jpg' %});
+	height: 200px;
+	border: 10px solid #fff;
+
+	background-position: center;
+	
+	
+
+	border: 10px solid transparent;
+	height: 100vh;
+	
+	
+}
+ .text h1{
+	color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+	font-size:50px;
+	text-align: center;
+}
+.text u{color:#00bfff;}
+
+ul{
+	text-align: center;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 16px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: transparent;
+	color: #000;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+.main{
+	border: 10px solid transparent;
+	max-width: 700px;
+	margin: auto;
+	top: 80px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.main button{
+	text-align: center;
+	font-size: 18px;
+	font-style: italic;
+	display: inline-block;
+	width: 400px;
+	background-color: transparent;
+	color: #fff;
+	border-radius: 30px;
+
+}
+
+.main button:hover{
+	background-color: transparent;
+	color:#000;
+}
+</style>	
+</head>
+<body>
+	<header>
+		<div class="text">
+			<u><h1>Picnic spot beaches</h1></u>
+		</div>
+		<div class="main">
+			<ul>
+				 <li><form action ="{% url 'alibaug' %}"><BUTTON type="submit">ALIBAUG BEACH         </BUTTON></form></li>
+			     <li><form action ="{% url 'awas' %}"><BUTTON type="submit">AWAS BEACH         </BUTTON></form></li> 
+			     <li><form action ="{% url 'bhatye' %}"><BUTTON type=submit>BHATYE BEACH       </BUTTON></form></li> 
+			     <li><form action ="{% url 'divegar' %}"><BUTTON type=submit>DIVEAGAR BEACH     </BUTTON></form></li> 
+			     <li><form action ="{% url 'ganpatipule' %}"><BUTTON type="submit">GANPATIPULE BEACH  </BUTTON></form></li> 
+			     <li><form action ="{% url 'gorai' %}"><BUTTON type="submit">GORAI BEACH        </BUTTON></form></li> 
+			     <li><form action ="{% url 'guhagar' %}"><BUTTON type="submit">GUHAGAR BEACH      </BUTTON></form></li> 
+			     <li><form action ="{% url 'harihareshwar' %}"><BUTTON type="submit">HARIHARESHWAR BEACH</BUTTON></form></li>
+			     <li><form action ="{% url 'hedvi' %}"><BUTTON type="submit">HEDVI BEACH        </BUTTON></form></li>
+			     <li><form action ="{% url 'juhu' %}"><BUTTON type="submit">JUHU BEACH         </BUTTON></form></li>
+			     <li><form action ="{% url 'kashid' %}"><BUTTON type="submit">KASHID BEACH       </BUTTON></form></li>
+			     <li><form action ="{% url 'kelwa' %}"><BUTTON type="submit">KELWA BEACH        </BUTTON></form></li>
+			     <li><form action ="{% url 'malvan' %}"><BUTTON type="submit">MALVAN BEACH       </BUTTON></form></li>
+			     <li><form action ="{% url 'manori' %}"><BUTTON type="submit">MANORI BEACH       </BUTTON></form></li>
+			     <li><form action ="{% url 'murud' %}"><BUTTON type="submit">MURUD BEACH        </BUTTON></form></li>
+			     <li><form action ="{% url 'shrivardhan' %}"><BUTTON type="submit">SHRIVARDHAN BEACH  </BUTTON></form></li>
+			     <li><form action ="{% url 'suruchi' %}"><BUTTON type="submit">SURUCHI BEACH      </BUTTON></form></li> 
+			     <li><form action ="{% url 'tarkarli' %}"><BUTTON type="submit">TARKARLI BEACH     </BUTTON></form></li>
+		         <li><form action ="{% url 'varsoli' %}"><BUTTON type="submit">VARSOLI BEACH      </BUTTON></form></li>
+				 <li><form action ="{% url 'velneshwar' %}"><BUTTON type="submit">VELNESHWAR BEACH   </BUTTON></form></li>
+				 
+			
+			</ul>
+		</div>
+		
+	</header>
+
+	 
+</body>
+</html>

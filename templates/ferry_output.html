@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferry output</title>
+</head>
+<style media="screen">
+    body{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url({% static 'jetty.jpg' %});
+        background-position:center;
+    }
+    table,th,td{
+        border:1px solid rgb(245, 234, 234);
+        border-collapse:collapse;
+        padding:10px;
+        font-size:25px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:100px;
+        color:white;
+        text-align:center;
+       
+    }
+    tr:nth-child(odd){
+        background-color:rgb(83, 5, 47);
+    }
+    tr:nth-child(even){
+        background-color:rgb(122, 4, 87);
+    }
+    caption{
+        font-style: italic;
+        text-align:left;
+        color: #fff;
+        font-family: 'Times New Roman', Times, serif;
+        font-size:40px;
+    }
+    tr.place{
+        background-color:rgb(70, 7, 95);
+    }
+    button{
+        margin-right: auto;
+        background-color: green;
+        color:white;
+        border-radius: 10px;
+        font-size:20px;
+    }
+
+    button:hover{
+        background-color: transparent;
+        color: rgb(252, 249, 249);
+    }
+    p{
+        font-size:20px;
+        color:rgb(245, 241, 19);
+        font-weight: bolder;
+    }
+    div{
+        position: relative;
+    }
+    .home{
+        position:absolute;
+        right:1%;
+        bottom:7%
+    }
+</style>
+<body>
+    <table style="width:45%">
+        <caption>
+            FERRY DETAILS
+        </caption>
+        <tr class="place">
+            <th colspan="2">{{place1}} &rarr; {{place2}}</th>
+          
+        </tr>
+        <tr>
+            <th>First ferry</th>
+            <td> {{ob.first}}</td>
+        </tr>
+        <tr>
+            <th>Last ferry</th>
+            <td>{{ob.last}}</td>
+        </tr>
+        <tr>
+            <th>Frequency</th>
+            <td>{{ob.frequency}}</td>
+        </tr>
+        <tr>
+            <th>Journey time</th>
+            <td>{{ob.journeytime}} min</td>
+        </tr>
+        <tr>
+            <th>Fare</th>
+            <td>{{ob.fare}}/-</td>
+        </tr>
+        <tr>
+            <th>Carry bike</th>
+            <td>{{ob.carrybike}}</td>
+        </tr>
+        <tr>
+            <th>Availbility</th>
+            <td>{{ob.avail}}</td>
+        </tr>
+        
+    </table>
+    <div>
+        <p>Note:Fequency of ferry reduces during lowtide</p>
+        <form action="{% url 'tidein' %}">
+            <button type="submit">
+                <  CHECK TIDE<br>TIMINGS<br>
+            </button>
+        </form>
+    </div>
+    <form action="{% url 'index' %}" class="home">
+        <button type="submit" text-align="right">
+            < BACK TO <br>HOME PAGE<br>
+        </button>
+    </form>
+
+    
+</body>
+</html>

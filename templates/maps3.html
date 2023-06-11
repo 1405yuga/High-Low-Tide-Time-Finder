@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <style media="screen">
+        button{
+            margin-right: auto;
+            background-color: green;
+            color:white;
+            border-radius: 10px;
+            font-size:20px;
+        }
+        
+        button:hover{
+            background-color: transparent;
+            color: rgb(44, 41, 41);
+        }
+    </style>
+
+
+<body>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15249.814756741667!2d73.25627527850929!3d17.14812776155727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bea1007c2ae1b25%3A0x1161b3dec01414fc!2sGanpatipule%20Beach!5e0!3m2!1sen!2sin!4v1600242849999!5m2!1sen!2sin"  width="1400" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <form action="{% url 'index' %}">
+        <button type="submit">
+            < BACK TO <br>HOME PAGE<br>
+        </button>
+    </form>
+    </html>

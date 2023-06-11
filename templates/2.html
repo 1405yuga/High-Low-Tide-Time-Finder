@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <style media="screen">
+        button{
+            margin-right: auto;
+            background-color: green;
+            color:white;
+            border-radius: 10px;
+            font-size:20px;
+        }
+        
+        button:hover{
+            background-color: transparent;
+            color: rgb(44, 41, 41);
+        }
+        div{
+            position: relative;
+        }
+        .home{
+            position:absolute;
+            right:1%;
+            bottom:4%
+        }
+    </style>
+
+
+
+<body>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.6634380010737!2d72.86225914962658!3d18.634201887280792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be87a5a97c0f41b%3A0xcf99167616d8c717!2sKulaba%20Fort!5e0!3m2!1sen!2sin!4v1601212150028!5m2!1sen!2sin" width="1400" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<div>
+    <form action="{% url 'ferryin' %}">
+        <button type="submit">
+            <  CHECK FERRY<br>TIMINGS<br>
+        </button>
+    </form>
+</div>
+<form action="{% url 'index' %}" class="home">
+    <button type="submit" text-align="right">
+        < BACK TO <br>HOME PAGE<br>
+    </button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<link href="style2.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<title>TIDE TIMINGS</title>
+
+<style media="screen">
+
+
+ body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url({% static 'beach.jpg'%});
+    background-position: center;
+    background-size: cover;
+
+    
+   
+}
+
+caption{
+    font-style: italic;
+    text-align:left;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:40px;    
+}
+
+button{
+    margin-right: auto;
+    background-color: green;
+    color:white;
+    border-radius: 10px;
+    font-size:20px;
+    margin-top:150px;
+}
+
+button:hover{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+h1{
+    color:white;
+    text-align:center;
+    margin-top: auto;
+    font-style: italic;
+}
+
+
+table,th,td{
+    border:1px solid rgb(245, 234, 234);
+    border-collapse:collapse;
+    padding:10px;
+    font-size:25px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:150px;
+    color:white;
+    text-align:center;
+   
+}
+tr:nth-child(odd){
+    background-color:rgb(13, 79, 105);
+}
+tr:nth-child(even){
+    background-color:rgb(14, 122, 149);
+
+}
+p{
+    font-size:50px;
+}
+
+</style>
+<body>
+    
+   <table style="width:45%">
+       
+       <tr>
+           <th>Type</th>
+          <th>Time</th>
+       </tr>
+        {%for t in tt%}
+
+            <tr>
+                <td class="col1">{{t.typ}}</td> 
+                <td class="col2">{{t.time}}  {{t.AMPM}}</td>
+             </tr>   
+
+        {%endfor%}
+    
+    </table>
+
+<form action="{% url 'index' %}">
+    <button type="submit">
+        < BACK TO <br>HOME PAGE<br>
+    </button>
+</form>
+</body>
+</head>
